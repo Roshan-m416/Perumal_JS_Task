@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Loops</title>
+</head>
+<body>
+
+<h2>Check Console Output</h2>
+
+<script>
+
+// 1. For loop (1 to 10)
+console.log("For Loop (1 to 10):");
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+// 2. While loop (1 to 5)
+console.log("While Loop (1 to 5):");
+let j = 1;
+while (j <= 5) {
+    console.log(j);
+    j++;
+}
+
+// 3. Do-while loop (1 to 3)
+console.log("Do-While Loop (1 to 3):");
+let k = 1;
+do {
+    console.log(k);
+    k++;
+} while (k <= 3);
+
+// 4. Continue and Break
+console.log("Continue & Break (1 to 10):");
+for (let x = 1; x <= 10; x++) {
+
+    if (x === 5) {
+        continue; // skip 5
+    }
+
+    if (x === 8) {
+        break; // stop at 8
+    }
+
+    console.log(x);
+}
+
+</script>
+
+</body>
+</html>
