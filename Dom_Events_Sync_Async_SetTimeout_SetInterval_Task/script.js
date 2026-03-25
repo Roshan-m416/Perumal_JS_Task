@@ -1,0 +1,39 @@
+let input = document.getElementById("inputBox");
+let output = document.getElementById("output");
+
+input.addEventListener("input", function () {
+  output.textContent = input.value;
+});
+
+let button = document.getElementById("clickBtn");
+
+button.addEventListener("click", function () {
+  alert("Button Clicked!");
+});
+
+let form = document.getElementById("myForm");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  alert("Form Submitted!");
+});
+
+console.log("Start");
+
+console.log("This is synchronous");
+
+setTimeout(function () {
+  console.log("This is asynchronous (after 2 seconds)");
+}, 2000);
+
+console.log("End");
+
+setTimeout(function () {
+  console.log("Hello after 2 seconds");
+}, 2000);
+
+let count = 1;
+setInterval(function () {
+  console.log("Counter:", count);
+  count++;
+}, 1000);
