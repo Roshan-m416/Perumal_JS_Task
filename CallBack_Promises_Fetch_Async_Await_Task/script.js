@@ -1,23 +1,29 @@
-let person = {
-  name: "Perumal",
-  age: 22,
-  sayHello: function () {
-    return "Hello, my name is " + this.name;
-  },
-};
+// Callback function
+function processData(callback) {
+    let message = "Processing done";
+    callback(message);
+}
 
-let originalName = person.name;
+processData(function(result) {
+    document.getElementById("output").innerHTML = result;
+});
 
-person.age = 23;
-person.city = "Chennai";
+// Promise
+let myPromise = new Promise(function(resolve, reject) {
+    let success = true;
 
-let greeting = person.sayHello();
+    if (success) {
+        resolve("Promise resolved");
+    } else {
+        reject("Promise rejected");
+    }
+});
 
-let result = `
-Original Name: ${originalName} <br>
-Updated Age: ${person.age} <br>
-Added City: ${person.city} <br>
-Method Output: ${greeting}
-`;
-
-document.getElementById("output").innerHTML = result;
+// then and catch
+myPromise
+    .then(function(data) {
+        document.getElementById("output").innerHTML += "<br>" + data;
+    })
+    .catch(function(error) {
+        document.getElementById("output").innerHTML += "<br>" + error;
+    });
